@@ -6,13 +6,13 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#define ROWS 60
-#define COLS 60
+#define ROWS 16
+#define COLS 16
 #define OFF 0
 #define ON 1
 #define BLACK 8, 0, 0, 0, 0
-#define scr_width 600
-#define scr_height 600
+#define scr_width 160
+#define scr_height 128
 #define cell_width (scr_width / ROWS)
 #define cell_height (scr_height / COLS)
 
