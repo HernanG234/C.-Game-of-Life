@@ -16,3 +16,5 @@ add_executable(gameoflife gameoflife.c)
 
 include_directories(${SDL_INCLUDE_DIRS} ${SDLIMAGE_INCLUDE_DIRS})
 target_link_libraries(gameoflife ${SDL_LIBRARIES} ${SDLIMAGE_LIBRARIES} m)
+
+INSTALL(TARGETS gameoflife DESTINATION bin)
