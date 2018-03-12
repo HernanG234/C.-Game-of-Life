@@ -11,8 +11,8 @@
 #define OFF 0
 #define ON 1
 #define BLACK 8, 0, 0, 0, 0
-#define scr_width 160
-#define scr_height 128
+#define scr_width 128
+#define scr_height 160
 #define cell_width (scr_width / ROWS)
 #define cell_height (scr_height / COLS)
 
@@ -57,7 +57,8 @@ int main(void) {
                               SDL_SWSURFACE);
     if (! screen) {
         perror("SDL_SetVideoMode");
-        return EXIT_FAILURE;
+	printf("Video initialization failed: %s", SDL_GetError());
+	return EXIT_FAILURE;
     }
     Uint32 bgcolor = SDL_MapRGB(screen->format, 0xFF, 0xFF, 0xFF);
     if (SDL_FillRect(screen, &(screen->clip_rect), bgcolor) == -1) {
